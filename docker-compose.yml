@@ -1,0 +1,13 @@
+# docker exec -it mailhedgehog /bin/sh
+version: "3"
+services:
+    mailhedgehog:
+        image: yaroslawww/mailhedgehog:latest
+        container_name: 'mailhedgehog'
+        restart: always
+        ports:
+            - "1033:1025"
+            - "1034:8025"
+        volumes:
+            - ./:/mailhedgehog-app
+        entrypoint: /mailhedgehog-app/entrypoint.sh
