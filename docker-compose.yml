@@ -6,8 +6,8 @@ services:
         container_name: 'mailhedgehog'
         restart: always
         ports:
-            - "1033:1025"
-            - "1034:8025"
+            - "1025:1025"
+            - "8025:8025"
         volumes:
             - ./:/mailhedgehog-app
         entrypoint: /mailhedgehog-app/entrypoint.sh
